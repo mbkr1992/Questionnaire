@@ -17,6 +17,10 @@
 		9A481482209F8E5E006025D3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A481478209F8B95006025D3 /* Quick.framework */; };
 		9A481487209F8F74006025D3 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A481479209F8B95006025D3 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A481488209F8F74006025D3 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A481478209F8B95006025D3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A716EF1209F9B4C0072BD65 /* QuestionnaireProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A716EF0209F9B4C0072BD65 /* QuestionnaireProtocol.swift */; };
+		9A716EF5209FA06C0072BD65 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A716EF4209FA06C0072BD65 /* Option.swift */; };
+		9A716EF7209FA0DF0072BD65 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A716EF6209FA0DF0072BD65 /* Question.swift */; };
+		9A716EFA209FA1AA0072BD65 /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A716EF9209FA1AA0072BD65 /* Questionnaire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		9A48146E209F8AD7006025D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A481478209F8B95006025D3 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		9A481479209F8B95006025D3 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		9A716EF0209F9B4C0072BD65 /* QuestionnaireProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireProtocol.swift; sourceTree = "<group>"; };
+		9A716EF4209FA06C0072BD65 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		9A716EF6209FA0DF0072BD65 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		9A716EF9209FA1AA0072BD65 /* Questionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +108,11 @@
 		9A481456209F8AD6006025D3 /* Questionnaire */ = {
 			isa = PBXGroup;
 			children = (
+				9A716EF8209FA1620072BD65 /* Model */,
 				9A481457209F8AD6006025D3 /* AppDelegate.swift */,
 				9A481459209F8AD6006025D3 /* ViewController.swift */,
 				9A48145B209F8AD6006025D3 /* Main.storyboard */,
+				9A716EEF209F9B040072BD65 /* Utilities */,
 				9A48145E209F8AD7006025D3 /* Assets.xcassets */,
 				9A481460209F8AD7006025D3 /* LaunchScreen.storyboard */,
 				9A481463209F8AD7006025D3 /* Info.plist */,
@@ -126,6 +136,40 @@
 				9A481478209F8B95006025D3 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A716EEF209F9B040072BD65 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9A716EF2209F9F690072BD65 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9A716EF0209F9B4C0072BD65 /* QuestionnaireProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9A716EF3209FA0480072BD65 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				9A716EF4209FA06C0072BD65 /* Option.swift */,
+				9A716EF6209FA0DF0072BD65 /* Question.swift */,
+				9A716EF9209FA1AA0072BD65 /* Questionnaire.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		9A716EF8209FA1620072BD65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A716EF3209FA0480072BD65 /* Implementation */,
+				9A716EF2209F9F690072BD65 /* Protocol */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A716EF7209FA0DF0072BD65 /* Question.swift in Sources */,
+				9A716EF5209FA06C0072BD65 /* Option.swift in Sources */,
 				9A48145A209F8AD6006025D3 /* ViewController.swift in Sources */,
 				9A481458209F8AD6006025D3 /* AppDelegate.swift in Sources */,
+				9A716EF1209F9B4C0072BD65 /* QuestionnaireProtocol.swift in Sources */,
+				9A716EFA209FA1AA0072BD65 /* Questionnaire.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
